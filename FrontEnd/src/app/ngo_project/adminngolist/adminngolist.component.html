@@ -1,0 +1,120 @@
+<app-admin-panel></app-admin-panel>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-image: url("assets/images/html_table.jpg");
+        }
+        
+    </style>
+    <main class="table" id="customers_table">
+        <div *ngIf="click">
+            <section class="table__header">
+                <h1>NGO List</h1>
+                <div class="input-group">
+                    <input type="search" (click)="mytablescripy()" placeholder="Search...">
+                </div>
+                <div class="export__file">
+                    <label for="export-file" class="export__file-btn" title="Export File">
+
+                        <i class="fa-solid fa-angles-down"></i>
+
+                    </label>
+                    <input type="checkbox" id="export-file">
+                    <div class="export__file-options">
+                        <label>Export As &nbsp; &#10140;</label>
+
+                        <label for="export-file" id="toCSV">CSV <img src="assets/icons/csv.png" alt=""></label>
+
+                    </div>
+                </div>
+            </section>
+            <section class="table__body">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ngo_id</th>
+                            <th>Ngo_Name</th>
+                            <th>NGO Description</th>
+                            <th>Action</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let n of ngos | async">
+                            <td>{{n.ngo_id}}</td>
+                            <td>{{n.name}}</td>
+                            <td>{{n.description}}</td>
+
+                            <td>
+
+                                <button type="button " class="btn btn-outline-danger" (click)="deleteNgo(n.ngo_id)"><i class="fa-solid fa-trash-can"></i>&nbsp;Delete</button>&nbsp;&nbsp;
+
+                            <button type="button " class="btn btn-outline-primary" (click)="updateDetails(n.ngo_id)"><i class="fa-solid fa-edit"></i>&nbsp;Edit</button>&nbsp;&nbsp;
+
+                            <button type="button " class="btn btn-outline-primary" (click)="showDetails(n)" >
+                                <i class="fa-regular fa-address-card" ></i>
+                                    &nbsp;View</button>&nbsp;&nbsp;
+
+
+                            </td>
+                           
+
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </section>
+        </div>
+        <Section *ngIf="selectedNgo" class="custom" class="table__body">
+            <button class="btn btn-primary" (click)="goBack()">GoBack</button>
+        
+            <h3>NGO Details</h3>
+            <p><strong>Ngo_id:</strong> {{ selectedNgo.ngo_id }}</p>
+            <p><strong>Ngo_Name:</strong> {{ selectedNgo.name }}</p>
+            <p><strong>NGO Description:</strong> {{ selectedNgo.description }}</p>
+            <p><strong>Expenditure</strong>
+                <div>
+                <table class="table">
+     
+                <!-- <p>{{e.exp_amount}}</p>
+                <p>{{e.description}}</p>
+                <p>{{e.expenditureDate}}</p> -->
+                
+                    <thead>
+                        <tr>
+                            <th>Exp_amount</th>
+                            <th>Description</th>
+                            <th>ExpenditureDate</th>
+                            <!-- Add more headers as needed -->
+                        </tr>
+                    </thead>
+                    <tbody *ngFor="let e of selectedNgo.expenditures">
+                        <tr>
+                            <td>{{e.exp_amount}}</td>
+                            <td>{{e.description}}</td>
+                            <td>{{e.expenditureDate}}</td>
+                        </tr>
+                        
+                    </tbody>
+                    <tr> <b> <td>Total Expenditure: ₹ {{totalExpenditureAmount}}</td></b></tr>
+                </table>
+            </div>
+    
+            <!-- Add more details as needed -->
+    
+    </Section>
+    </main>
+</body>
+
+</html>

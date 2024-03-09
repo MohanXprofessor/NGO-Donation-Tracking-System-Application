@@ -1,0 +1,35 @@
+
+/* Start footer */
+.list-unstyled li {
+    padding: 10px;
+    width: 40px;
+  
+  }
+  
+  .lowerfooter {
+    background-color: rgba(14, 8, 8, 0.712);
+    color: white;
+    height: 330px;
+    width: 100%;
+  }
+  
+  footer {
+    bottom: 0;
+  }
+  
+  .row {
+    margin-top: 50px;
+  }
+  
+  .list-unstyled i {
+    color: white;
+  }
+  
+  .list-unstyled i:hover {
+    color: rgb(26, 26, 245);
+  }
+  
+  .address{
+    text-align: center;
+    padding: 5px;
+  }

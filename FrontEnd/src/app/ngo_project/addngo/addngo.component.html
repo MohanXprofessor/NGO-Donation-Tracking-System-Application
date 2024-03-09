@@ -1,0 +1,15 @@
+<app-admin-panel></app-admin-panel>
+<div  class="container">
+
+  <form id="ngoForm" (ngSubmit)="onSubmit()">
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required id="name" required [(ngModel)]="ngo.name" name="name">
+
+    <label for="ngoName">NGO Name:</label>
+    <input type="text" id="ngoName" name="ngoName" required id="description" required [(ngModel)]="ngo.description" name="description">
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+

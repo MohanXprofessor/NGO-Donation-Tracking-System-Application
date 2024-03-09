@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    body{
+      background-image: url(assets/images/html_table.jpg);
+    }
+  </style>
+  <div class="container">
+      <h2>Give Donation</h2>
+    
+      <!-- Form for submitting expenditure data -->
+      <form (ngSubmit)="onSubmit()">
+    
+        <!-- Expenditure Amount -->
+        <div class="form-group">
+          <label for="exp_amount">Donation Amount:</label>
+          <input type="number" id="exp_amount" class="form-control" [(ngModel)]="donation.amount" name="amount" required>
+          <!-- You can add validation messages here -->
+        </div>
+    
+      
+  
+  
+    <div class="form-group">
+      <label for="ngo_id">NGO:</label>
+      <select class="form-control" id="ngo_id" [(ngModel)]="donation.ngo.ngo_id" name="ngo">
+        <!-- Populate options with NGOs -->
+        <option *ngFor="let ngo of ngos" [value]="ngo.ngo_id">{{ ngo.name }}</option>
+      </select>
+    </div>
+     <!--User (Example Field) -->
+   <div class="form-group">
+      <label for="user_id">user ID:</label>
+      
+      <select class="form-control" id="user_id" name="user_id" [(ngModel)]="donation.user.user_id" required>
+        
+        <option *ngFor="let u of users" [value]="u.user_id">{{ u.user_id}}</option>
+      </select>
+    </div>
+        <!-- Expenditure Date (Example Field) -->
+        <div class="form-group">
+          <label for="donationDate">Date:</label>
+          <input type="datetime-local" id="donationDate" class="form-control" name="donationDate" [(ngModel)]="donation.donationDate">
+  
+          <!-- You can add validation messages here -->
+        </div>
+    
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+    
+      </form>
+    </div>
+    
+</body>
+</html>
+<app-footer></app-footer>

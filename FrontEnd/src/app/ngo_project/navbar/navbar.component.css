@@ -1,0 +1,32 @@
+*{
+    padding: 0.5;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+.a{
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+
+
+ul li a:hover{
+    color:rgba(35, 117, 194, 0.811);
+    border-bottom:2px solid green;
+    border-radius: 15px;
+}
+
+.form-control{
+    border-radius: 20px;
+    text-align: center;
+    font-size: 1rem;
+}
+.btn{
+    border-radius: 20px;
+}

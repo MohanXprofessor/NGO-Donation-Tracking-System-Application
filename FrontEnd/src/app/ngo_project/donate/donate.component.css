@@ -1,0 +1,9 @@
+.container{
+    width: 50%;
+    height: 87.5vh;
+    color: white;
+/* margin-top: 20px; */
+padding: 50px;
+border: 1px solid white;
+border-radius: 25px;
+}

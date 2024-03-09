@@ -1,0 +1,11 @@
+.container{
+    width: 50%;
+    height: 450px;
+    margin-top: 20px;
+    border: 2px solid gray;
+    border-radius: 25px;
+
+    h2{
+        border-bottom: 2px solid gray;
+    }
+}

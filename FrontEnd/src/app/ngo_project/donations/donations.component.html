@@ -1,0 +1,26 @@
+<body>
+  <style>
+     .container {
+            background-image: url("assets/images/payment.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+  </style>
+  <div class="back">
+    <div class="container ">
+    <h3 >Donate</h3>
+    <form class="form" #donationForm="ngForm">
+      <!-- <label for="email">Email:</label> -->
+      <input type="email" class="form-control " placeholder="E-mail" [(ngModel)]="userDetails.email" name="email" required>
+  
+      <!-- <label for="contact">Contact:</label> -->
+      <input type="tel" class="form-control " placeholder="Mobile Number" [(ngModel)]="userDetails.contact" name="contact" required>
+  
+      <!-- <label for="amount">Amount:</label> -->
+      <input type="text" class="form-control" placeholder="Enter amount" [(ngModel)]="amount" name="amount" required>
+      <br>
+      <button (click)="paymentStart()" class="btn btn-success" [disabled]="donationForm.invalid">Donate</button>
+    </form>
+  </div>
+</div>
+  </body>

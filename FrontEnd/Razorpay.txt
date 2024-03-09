@@ -1,0 +1,5 @@
+key_id
+rzp_test_M1sggR7jCFARkD
+
+key_secret
+qJRkoqROnGoEBnnQV510FyQW

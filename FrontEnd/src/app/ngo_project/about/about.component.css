@@ -1,0 +1,18 @@
+.about-msg {
+    display: flex;
+    justify-content: space-evenly;
+}
+h1 {
+    color:red;
+}
+.about-msg p{
+    height: 300px;
+    width: 500px;
+}
+.about-msg img{
+    border-radius: 50px;
+}
+.about-msg img:hover{
+    border-radius: 50px;
+    
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | Page</title>
+</head>
+
+<body>
+    <!-- Box icon CSS   -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- End -->
+
+    <div class="sidebar close">
+        <div class="logo-details">
+            <a routerLink="/admin-panel"><i class='bx bxs-user-circle'></i></a>
+            <span class="logo_name">Menu</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a routerLink="/admin-panel">
+                    <i class='bx bx-home'></i>
+                    <span class="link_name">Home</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" routerLink="/admin-panel">Home</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="icon-link">
+                    <a routerLink="admin-panel">
+                        <i class='bx bxs-message-square-add'></i>
+                        <span class="link_name">Add</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" routerLink="admin-panel">Add</a></li>
+                    <li><a href="/addngo">NGO</a></li>
+                    
+
+                </ul>
+            </li>
+            <li>
+                <div class="icon-link">
+                    <a routerLink="admin-panel">
+                        <i class='bx bxs-data'></i>
+                        <span class="link_name">Record</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" routerLink="admin-panel">Details</a></li>
+                    <li><a routerLink="/adminngolist">NGO List</a></li>
+                    <!-- <li><a href="#">Detail 2</a></li> -->
+                </ul>
+            </li>
+           
+            <li>
+                <a href="#">
+                    <i class='bx bx-rupee'></i>
+                    <span class="link_name">All Donation</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Donation </a></li>
+                    <li><a class="link_name" routerLink="/ngoexpenditure">Expenditure </a></li>
+
+                </ul>
+            </li>
+           
+           
+            
+            <li>
+                <div class="profile-details">
+                    <div class="profile-content">
+                        <img src="assets/icons/ngo.png"
+                            alt="profileImg">
+                    </div>
+                    <div class="name-job">
+                        <div class="profile_name">John Doe</div>
+                        <div class="job">Crypto Expert</div>
+                    </div>
+                    <i class='bx bx-log-out'></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+<div class="admintitle">
+    <h2>Admin DashBoard</h2> <hr>
+</div>
+    
+  
+   
+
+</body>
+
+</html>

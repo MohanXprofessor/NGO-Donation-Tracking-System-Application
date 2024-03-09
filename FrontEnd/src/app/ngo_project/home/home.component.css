@@ -1,0 +1,68 @@
+/* Card Css */
+.card {
+    width: 300px;
+    height: 380px;
+    
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s ease; /* Add transition for smooth effect */
+  }
+  .card-row{
+    display: flex;
+    margin-top: 50px;
+    margin-left: 50px;
+    justify-content: space-evenly;
+  }
+  
+  .card:hover {
+    transform: scale(1.1); /* Make the card slightly bigger on hover */
+  }
+  
+  /* .card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(255, 255, 255, 0.5); */
+    /* Background color with opacity */ 
+   /* filter: blur(10px); 
+    /* Adjust the blur effect as needed 
+    z-index: 1;
+  } */
+  
+  .card-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    color: #fff;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .btn-donate {
+    background-color: #ff6b6b;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    width: 90%;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-donate:hover {
+    background-color: #e74c3c;
+  }
+/* End Card CSS */

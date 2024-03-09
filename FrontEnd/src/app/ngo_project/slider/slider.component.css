@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+.carousel-inner{
+    height: 400px;
+    width: 100%;
+    padding: 10px;
+}
+.carousel img{
+    height: 400px;
+    width: 100%;
+    background-repeat: no-repeat;
+    
+}
+
+/* slider text  */
+.carousel-inner h5,p{
+    width: 25%;
+    margin-bottom: 60px;
+    color: black;
+    font-size: 1.7rem;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 3px;
+    margin-left: 80%;
+
+    
+
+}
+.carousel-inner p{
+    width: 25%;
+    margin-bottom: 60px;
+    color: rgb(79, 76, 76);
+    font-size: 1.5rem;
+    margin-left: 80%;
+
+
+}

@@ -1,0 +1,51 @@
+<app-admin-panel></app-admin-panel>
+<!-- expenditure.component.html -->
+
+<div class="container">
+    <h2>Expenditure Form</h2>
+  
+    <!-- Form for submitting expenditure data -->
+    <form (ngSubmit)="onSubmit()">
+  
+      <!-- Expenditure Amount -->
+      <div class="form-group">
+        <label for="exp_amount">Expenditure Amount:</label>
+        <input type="number" id="exp_amount" class="form-control" [(ngModel)]="exp.exp_amount" name="exp_amount" required>
+        <!-- You can add validation messages here -->
+      </div>
+  
+      <!-- Description -->
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <input type="text" id="description" class="form-control" [(ngModel)]="exp.description" name="description" required>
+        <!-- You can add validation messages here -->
+      </div>
+  
+      <!-- NGO (Example Field) -->
+      <!-- <div class="form-group">
+        <label for="ngo_id">NGO:</label>
+        <input type="number" id="ngo_id" class="form-control" [(ngModel)]="exp.ngo.ngo_id" name="ngo">
+        You can add validation messages here 
+      </div>-->
+ <!-- NGO (Example Field) -->
+ <div class="form-group">
+    <label for="ngo_id">NGO ID:</label>
+    <!-- Use a dropdown/select list for selecting the NGO -->
+    <select class="form-control" id="ngo_id" name="ngo_id" [(ngModel)]="exp.ngo.ngo_id" required>
+      <option *ngFor="let ngo of ngos" [value]="ngo.ngo_id">{{ ngo.ngo_id}}</option>
+    </select>
+  </div>
+      <!-- Expenditure Date (Example Field) -->
+      <div class="form-group">
+        <label for="expenditureDate">Expenditure Date:</label>
+        <input type="datetime-local" id="expenditureDate" class="form-control" name="expenditureDate" [(ngModel)]="exp.expenditureDate">
+
+        <!-- You can add validation messages here -->
+      </div>
+  
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-primary">Submit</button>
+  
+    </form>
+  </div>
+  
